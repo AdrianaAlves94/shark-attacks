@@ -34,7 +34,7 @@ def loadFile(url):
     df = df.drop(columns=cols_to_drop, errors='ignore')
     return df
 
-def conclude(df):
+def run_summary(df):
     print("\n" + "="*70)
     print("       GLOBAL SHARK ATTACK RISK ANALYSIS: EXECUTIVE SUMMARY       ")
     print("="*80)
