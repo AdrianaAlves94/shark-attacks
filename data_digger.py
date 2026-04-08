@@ -20,6 +20,7 @@ def loadFileAndClean(url):
     print("Connecting to database and fetching latest records...")
     df = pd.read_excel(url)
     time.sleep(1)
+    
     print("\nWohoo, Data is fetched successfully !!")
 
     df['Is_Fatal'] = df['Fatal Y/N'].apply(clean_fatal)
