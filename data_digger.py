@@ -16,7 +16,7 @@ def clean_age(val):
     if nums: return int(nums[0])
     return None
 
-def loadFile(url):
+def loadFileAndClean(url):
     print("Connecting to database and fetching latest records...")
     df = pd.read_excel(url)
     time.sleep(1)
@@ -32,7 +32,9 @@ def loadFile(url):
     cols_to_drop = ['Unnamed: 22','Unnamed: 21','original order','Case Number',
                     'Case Number.1', 'href','href formula','pdf']
     df = df.drop(columns=cols_to_drop, errors='ignore')
+
     return df
+   
 
 def run_summary(df):
     print("\n" + "="*70)
