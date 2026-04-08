@@ -16,7 +16,7 @@ def clean_age(val):
     if nums: return int(nums[0])
     return None
 
-def load_and_prepare_data(url):
+def loadFile(url):
     print("Connecting to database and fetching latest records...")
     df = pd.read_excel(url)
     time.sleep(1)
