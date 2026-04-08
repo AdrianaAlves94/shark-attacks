@@ -37,14 +37,14 @@ def load_and_prepare_data(url):
 def conclude(df):
     print("\n" + "="*70)
     print("       GLOBAL SHARK ATTACK RISK ANALYSIS: EXECUTIVE SUMMARY       ")
-    print("="*70)
+    print("="*80)
     time.sleep(1)
 
     # Global Metrics
     print(f"OVERALL MARKET SCOPE:")
     print(f"- Total Validated Incidents: {len(df):,}")
     print(f"- Global Avg. Fatality Rate: {df['Is_Fatal'].mean():.2%}")
-    print("-" * 70)
+    print("-" * 80)
     time.sleep(1)
 
     # Top 10 Countries
