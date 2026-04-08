@@ -67,5 +67,5 @@ def run_summary(df):
     print("-" * 80)
     print("INSURANCE RECOMMENDATION:")
     print("1. Apply 'High-Severity' surcharges for activities with Fatality Rates > 20%.")
-    print("2. Focus volume-based pricing in USA and AUSTRALIA.")
+    print("2. Focus volume-based pricing in USA and AUSTRALIA. Apply high risk prices especially for Teen People")
     print("3. Target 61+ age demographics for specialized adventure riders.")
