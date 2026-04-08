@@ -33,10 +33,8 @@ def loadFileAndClean(url):
     cols_to_drop = ['Unnamed: 22','Unnamed: 21','original order','Case Number',
                     'Case Number.1', 'href','href formula','pdf']
     df = df.drop(columns=cols_to_drop, errors='ignore')
-
     return df
    
-
 def run_summary(df):
     print("\n" + "="*70)
     print("       GLOBAL SHARK ATTACK RISK ANALYSIS: EXECUTIVE SUMMARY       ")
@@ -64,3 +62,10 @@ def run_summary(df):
     activity_analysis.columns = ['Activity', 'Volume', 'Fatality Rate']
     activity_analysis['Fatality Rate'] = activity_analysis['Fatality Rate'].map(lambda x: f"{x:.2%}")
     print(tabulate(activity_analysis, headers='keys', tablefmt='fancy_grid', showindex=False))
+   
+    # D. Recommendations
+    print("-" * 80)
+    print("INSURANCE RECOMMENDATION:")
+    print("1. Apply 'High-Severity' surcharges for activities with Fatality Rates > 20%.")
+    print("2. Focus volume-based pricing in USA and AUSTRALIA.")
+    print("3. Target 61+ age demographics for specialized adventure riders.")
